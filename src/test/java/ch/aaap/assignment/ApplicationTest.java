@@ -70,20 +70,18 @@ public class ApplicationTest {
   }
 
   @Test
-  public void returnsCorrectDistrictNameForZipCode() {
+  public void returnsCorrectDistrictNamesForZipCode() {
     assertEquals(
         "Bezirk Bülach",
-        sut.getDistrictForZipCode("8305"),
+        sut.getDistrictsForZipCode("8305").iterator().next(),
         "Correct district name for zip code '8305'");
     assertEquals(
         "Region Albula",
-        sut.getDistrictForZipCode("7457"),
+        sut.getDistrictsForZipCode("7457").iterator().next(),
         "Correct district name for zip code '7457'");
 
-    assertThrows(
-        IllegalArgumentException.class,
-        () -> sut.getDistrictForZipCode("9999"),
-        "Expected IllegalArgumentException");
+    assertEquals(0, sut.getDistrictsForZipCode("9999").size(), "Expected 0 results");
+    assertEquals(2, sut.getDistrictsForZipCode("8866").size(), "Expected 2 results");
   }
 
   @Test
@@ -92,11 +90,6 @@ public class ApplicationTest {
         "2016-04-10",
         sut.getLastUpdateOfPoliticalCommunityByPostalCommunityName("Vergeletto").toString(),
         "Correct last update of political community by postal community name 'Vergeletto'");
-
-    assertThrows(
-        IllegalArgumentException.class,
-        () -> sut.getDistrictForZipCode("Los Angeles"),
-        "Expected IllegalArgumentException");
   }
 
   @Test

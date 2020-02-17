@@ -64,7 +64,7 @@ public class Application {
    * @param zip code 4 digit zip code
    * @return district that belongs to specified zip code
    */
-  public String getDistrictForZipCode(String zipCode) {
+  public Set<String> getDistrictsForZipCode(String zipCode) {
     // TODO implementation
     throw new RuntimeException("Not yet implemented");
   }
