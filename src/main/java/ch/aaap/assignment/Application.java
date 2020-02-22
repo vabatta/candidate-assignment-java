@@ -34,7 +34,7 @@ public class Application {
   }
 
   /**
-   * @param canton code of a canton (e.g. ZH)
+   * @param cantonCode of a canton (e.g. ZH)
    * @return amount of political communities in given canton
    */
   public long getAmountOfPoliticalCommunitiesInCanton(String cantonCode) {
@@ -43,7 +43,7 @@ public class Application {
   }
 
   /**
-   * @param canton code of a canton (e.g. ZH)
+   * @param cantonCode of a canton (e.g. ZH)
    * @return amount of districts in given canton
    */
   public long getAmountOfDistrictsInCanton(String cantonCode) {
@@ -52,7 +52,7 @@ public class Application {
   }
 
   /**
-   * @param district number of a district (e.g. 101)
+   * @param districtNumber of a district (e.g. 101)
    * @return amount of districts in given canton
    */
   public long getAmountOfPoliticalCommunitiesInDistict(String districtNumber) {
@@ -61,7 +61,7 @@ public class Application {
   }
 
   /**
-   * @param zip code 4 digit zip code
+   * @param zipCode 4 digit zip code
    * @return district that belongs to specified zip code
    */
   public Set<String> getDistrictsForZipCode(String zipCode) {
@@ -70,7 +70,7 @@ public class Application {
   }
 
   /**
-   * @param postal community name
+   * @param postalCommunityName name
    * @return lastUpdate of the political community by a given postal community name
    */
   public LocalDate getLastUpdateOfPoliticalCommunityByPostalCommunityName(

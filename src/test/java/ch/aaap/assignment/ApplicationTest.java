@@ -21,7 +21,7 @@ public class ApplicationTest {
         sut.getModel().getPoliticalCommunities().size(),
         "Correct amount of political communities");
     assertEquals(
-        5633, sut.getModel().getPostalCommunities().size(), "Correct amount of postal communities");
+        4064, sut.getModel().getPostalCommunities().size(), "Correct amount of postal communities");
   }
 
   @Test
