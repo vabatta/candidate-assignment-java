@@ -1,12 +1,11 @@
 package ch.aaap.assignment;
 
-import java.time.LocalDate;
-import java.util.Set;
-
 import ch.aaap.assignment.model.Model;
 import ch.aaap.assignment.raw.CSVPoliticalCommunity;
 import ch.aaap.assignment.raw.CSVPostalCommunity;
 import ch.aaap.assignment.raw.CSVUtil;
+import java.time.LocalDate;
+import java.util.Set;
 
 public class Application {
 
